@@ -19,18 +19,18 @@ function App() {
   return <Accordian data={faqs} />;
 }
 
-function Accordian({ data }) {
+function Accordion({ data }) {
   return (
     // <AccordianComponent />
     <div className="min-h-screen bg-blue-200 gap-4 py-7 flex flex-col items-center justify-center">
       {data.map((el, i) => (
-        <AccordianComponent title={el.title} key={i} index={i} text={el.text} />
+        <AccordionComponent title={el.title} key={i} index={i} text={el.text} />
       ))}
     </div>
   );
 }
 
-function AccordianComponent({ title, text, index }) {
+function AccordionComponent({ title, text, index }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleIsOpen() {
