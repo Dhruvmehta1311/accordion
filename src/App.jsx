@@ -39,9 +39,9 @@ function AccordianComponent({ title, text, index }) {
         <section className="flex gap-8 font-semibold sm:font-bold text-sm sm:text-lg">
           <p>{index + 1}</p>
           <p>{title}</p>
-          <p>-</p>
+          <p className="cursor-pointer">-</p>
         </section>
-        <p tracking-tight>{text}</p>
+        {isOpen ? <p tracking-tight>{text}</p> : null}
       </div>
     </>
   );
