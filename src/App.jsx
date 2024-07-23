@@ -16,7 +16,7 @@ const faqs = [
 ];
 
 function App() {
-  return <Accordian data={faqs} />;
+  return <Accordion data={faqs} />;
 }
 
 function Accordion({ data }) {
