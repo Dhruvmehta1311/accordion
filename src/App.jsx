@@ -33,15 +33,32 @@ function Accordian({ data }) {
 function AccordianComponent({ title, text, index }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  function handleIsOpen() {
+    setIsOpen((isOpen) => !isOpen);
+  }
+
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-white w-[90%] p-6 max-w-[460px] mx-auto">
-        <section className="flex gap-8 font-semibold sm:font-bold text-sm sm:text-lg">
-          <p>{index + 1}</p>
+      <div
+        onClick={handleIsOpen}
+        className={`cursor-pointer shadow-xl rounded-md  bg-white w-[90%] p-6 max-w-[540px] mx-auto ${
+          isOpen ? "border-t-8 border-t-green-300 bg-green-100" : ""
+        }`}
+      >
+        <section
+          className={`flex justify-between items-center p-2 font-semibold sm:font-bold text-sm sm:text-xl ${
+            isOpen ? "text-green-600 " : "text-gray-900"
+          }`}
+        >
+          <p className="text-gray-900">{index + 1}</p>
           <p>{title}</p>
-          <p className="cursor-pointer">-</p>
+          <p className="text-center">{isOpen ? "-" : "+"}</p>
         </section>
-        {isOpen ? <p tracking-tight>{text}</p> : null}
+        {isOpen ? (
+          <div className="p-4 border-t border-gray-200">
+            <p>{text}</p>
+          </div>
+        ) : null}
       </div>
     </>
   );
