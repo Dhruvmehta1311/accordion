@@ -46,7 +46,7 @@ function AccordionComponent({ title, text, index }) {
         }`}
       >
         <section
-          className={`flex justify-between items-center p-2 font-semibold sm:font-bold text-sm sm:text-xl ${
+          className={`flex gap-4 p-2 font-semibold sm:font-bold text-sm sm:text-xl ${
             isOpen ? "text-green-600 " : "text-gray-900"
           }`}
         >
