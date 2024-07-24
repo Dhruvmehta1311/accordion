@@ -41,12 +41,12 @@ function AccordionComponent({ title, text, index }) {
     <>
       <div
         onClick={handleIsOpen}
-        className={`cursor-pointer shadow-xl rounded-md  bg-white w-[90%] p-6 max-w-[540px] mx-auto ${
+        className={`cursor-pointer shadow-xl rounded-md  bg-white w-[90%] py-4 pl-4 text-center max-w-[530px] mx-auto ${
           isOpen ? "border-t-8 border-t-green-300 bg-green-100" : ""
         }`}
       >
         <section
-          className={`flex gap-4 p-2 font-semibold sm:font-bold text-sm sm:text-xl ${
+          className={`flex justify-between gap-4 px-6 font-semibold sm:font-bold text-sm sm:text-xl ${
             isOpen ? "text-green-600 " : "text-gray-900"
           }`}
         >
